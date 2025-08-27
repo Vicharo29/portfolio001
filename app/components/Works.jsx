@@ -77,8 +77,12 @@ const Works = () => {
         <motion.p 
           variants={fadeIn("","",0.1, 1)}
           className="!mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-            Following are some of the projects that I have worked on.
-            It shows my skills and experience in the field of robotics and automation.
+            Below are selected projects I have worked on, showcasing the technologies and skills
+             I have developed over time. I am continually seeking new challenges and opportunities 
+             to grow in both robotics and software development. For additional details—such as source 
+             code and demo videos—please click the icon in the upper right corner of each project. 
+             Projects marked with the #research tag were completed as part of academic research during my studies; thus,
+             some of their content may be limited due to research ethics.
         </motion.p>
       </div>
 

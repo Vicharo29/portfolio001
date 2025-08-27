@@ -50,12 +50,14 @@ const About = () => {
       <motion.p 
         variants={fadeIn("","",0.1, 1)} 
         className="!mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-        I am a Robotic Enthusiast who is passionate about building robots 
-        and creating projects related to robotics. I have been working on 
-        various projects that involve robotics and automation. I have experience 
-        in designing, building, and programming robots for different applications. 
+        I am a robotic enthusiast who has a background in mechanical engineering and is passionate about robots 
+        and doing projects related to robotics. I have been working on 
+        various projects that involve robotics and automation.
+        I have experience in designing, building, and programming robots for different applications, using
+        3D CAD, microcontrollers, C++ and Python.         
+        I am currently a junior software engineer at a medical device company.
         I am always looking for new challenges and opportunities to learn and grow in 
-        the field of robotics.
+        the field of both robotics and software.
       </motion.p>
 
       <div className="!mt-20 flex flex-wrap gap-10">

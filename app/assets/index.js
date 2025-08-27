@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
+import backend from "./ros.png";
 import creator from "./cad.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
@@ -9,7 +9,9 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import sim from "./sim.png";
-import ros from "./ros.png";
+import mecha from "./mecha.png";
+import ml from "./ml.png";
+import logoR from "./logoR.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -30,6 +32,7 @@ import matlab from "./tech/matlab.png";
 import latex from "./tech/latex.png";
 import qt from "./tech/qt.png";
 import inventor from "./tech/inventor.ico";
+import ps from "./tech/ps.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -50,16 +53,27 @@ import irrigation from "./work/irrigation.jpg";
 import fgl from "./work/fgl.png";
 import fs from "./work/fs.png";
 import linear from "./work/linear.png";
+import weblogo from "./work/weblogo.png";
+
+import football from "./hobby/football.png";
+import running from "./hobby/running.png";
+import snowboarding from "./hobby/snowboard.png";
+
+import jobs from "./feedback/jobs.jpeg";
+import buddha from "./feedback/buddha.jpg";
+import einstein from "./feedback/einstein.jpg";
 
 export {
   logo,
+  logoR,
   backend,
   creator,
   mobile,
   web,
   cpp,
   cpp2,
-  ros,
+  mecha,
+  ml,
   python,
   matlab,
   qt,
@@ -97,5 +111,14 @@ export {
   irrigation,
   fgl,
   fs,
-  linear
+  linear,
+  latex,
+  football,
+  running,
+  snowboarding,
+  ps,
+  weblogo,
+  jobs,
+  buddha,
+  einstein,
 };

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { navLinks } from '../constants';
-import {logo, menu, close} from '../assets';
+import {logoR, menu, close} from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -21,7 +21,7 @@ const Navbar = () => {
           onClick={()=>{
             setActive("");
             window.scrollTo(0,0);}}>
-        <Image src={logo} alt="logo" className="w-9 h-9 object-obtain"/>
+        <Image src={logoR} alt="logo" className="w-9 h-9 object-obtain"/>
         <p className="text-white text-[18px] font-bold cursor-pointer flex"> Vicharo &nbsp;
           <span className="sm:block hidden">| Robotic Enthuiastic</span>
           </p>

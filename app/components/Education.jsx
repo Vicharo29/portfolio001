@@ -9,7 +9,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import {educations} from '../constants';
 import {SectionWrapper} from '../hoc';
-import { textVariant } from '../utils/motion';
+import { textVariant, fadeIn } from '../utils/motion';
 import { exp } from 'three/tsl';
 
 const EducationCard = ({education}) => 
@@ -60,6 +60,15 @@ const Education = () => {
           Education.
         </h2>
       </motion.div>
+      <motion.p 
+          variants={fadeIn("","",0.1, 1)} 
+          className="!mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+          After graduating from high school in Cambodia, I was able to pursue further education in Japan under the support from 
+          MEXT-<span className='hover:text-white'><a href="https://asja.gr.jp/" target="_blank" >ASJA</a></span> scholarship.
+          I studied Japanese for one year at Tokyo University of Foreign Studies
+          and then enrolled in Tokyo Institute of Technology, currently known as <span className='hover:text-white'><a href="https://www.isct.ac.jp/ja" target="_blank" >Tokyo University of Science</a></span>.
+          I am conversant in Khmer, English and Japanese.
+      </motion.p>
 
       <div className="!mt-20 flex flex-col">
         <VerticalTimeline>

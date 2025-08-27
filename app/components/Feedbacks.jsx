@@ -6,6 +6,8 @@ import {SectionWrapper} from '../hoc';
 import {fadeIn, textVariant} from '../utils/motion';
 import { research } from '../constants';
 
+import Image from 'next/image';
+
 const FeedbackCard = ({index, testimonial, name, designation, company, image}) => {
   return (
     <motion.div
@@ -24,11 +26,11 @@ const FeedbackCard = ({index, testimonial, name, designation, company, image}) =
               {designation} of {company}
             </p>
           </div>
-          <img 
+          <Image
             src={image}
             alt={`feedback-by-${name}`}
             className='w-10 h-10 object-cover rounded-full'
-            />
+          />
         </div>
       </div>
       
