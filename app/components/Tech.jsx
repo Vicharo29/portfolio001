@@ -1,5 +1,6 @@
 "use client"
 
+import { SectionWrapper } from "../hoc";
 import {BallCanvas} from "./canvas";
 
 // import { technologies } from "../constants";
@@ -57,11 +58,10 @@ const Tech = () => {
       {technologies.map((technology)=>(
         <div className="w-28 h-28" key={technology.name}>
             <BallCanvas icon={technology.icon}/>
-            {console.log(technology)}
         </div>
       ))}
     </div>
   )
 }
 
-export default Tech;
+export default SectionWrapper(Tech, "tech");

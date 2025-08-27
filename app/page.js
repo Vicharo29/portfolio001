@@ -5,6 +5,11 @@ import { About } from "./components";
 import { Education } from "./components";
 import { Experience } from "./components";
 import { Tech } from "./components";
+import { Works } from "./components";
+import { Hobby } from "./components";
+import { Feedbacks } from "./components";
+import { Contact } from "./components";
+import { StarsCanvas } from "./components";
 
 export default function Home() {
   return (
@@ -17,13 +22,13 @@ export default function Home() {
         <Education />
         <Experience />
         <Tech />
-        {/* <Works /> */}
+        <Works />
         {/* <Hobby /> */}
-        {/* <Feedbacks /> */}
-        {/* <div className = 'relative z-0'>
+        <Feedbacks />
+        <div className = 'relative z-0'>
           <Contact />
           <StarsCanvas />
-        </div> */}
+        </div>
       </div>
   );
 }

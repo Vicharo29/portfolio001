@@ -21,7 +21,7 @@ const Navbar = () => {
           onClick={()=>{
             setActive("");
             window.scrollTo(0,0);}}>
-        <Image src={logo} width={36} height={36} alt="logo" className="w-9 h-9 object-obtain"/>
+        <Image src={logo} alt="logo" className="w-9 h-9 object-obtain"/>
         <p className="text-white text-[18px] font-bold cursor-pointer flex"> Vicharo &nbsp;
           <span className="sm:block hidden">| Robotic Enthuiastic</span>
           </p>
@@ -42,8 +42,6 @@ const Navbar = () => {
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <Image 
             src={toggle ? close:menu}
-            width={28}
-            height={28}
             alt="menu"
             className="w-[28px] h-[28px] cursor-pointer object-contain"
             onClick={() => setToggle(!toggle)}

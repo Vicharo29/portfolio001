@@ -6,10 +6,9 @@ import {Decal, Float, OrbitControls, Preload, useTexture} from '@react-three/dre
 
 import CanvasLoader from '../Loader'
 
-const Ball = ({imgUrl}) => {
+const Ball = (props) => {
 
-  console.log(imgUrl);
-  const [decal] = useTexture([imgUrl]);
+  const [decal] = useTexture([props.imgUrl]);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
