@@ -5,22 +5,23 @@ import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
+
 const Developer = ({ animationName = 'idle', ...props }) => {
   const group = useRef();
 
-  const { scene } = useGLTF('/models/animations/developer.glb');
+  const { scene } = useGLTF('/models/animations/developer2.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
   const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
-  const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
-  const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
-  const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
+  const { animations: saluteAnimation } = useFBX('/models/animations/clapping.fbx');
+  const { animations: clappingAnimation } = useFBX('/models/animations/victory.fbx');
+  const { animations: victoryAnimation } = useFBX('/models/animations/salute.fbx');
 
-  idleAnimation[0].name = 'idle';
-  saluteAnimation[0].name = 'salute';
-  clappingAnimation[0].name = 'clapping';
-  victoryAnimation[0].name = 'victory';
+  if (idleAnimation.length > 0) idleAnimation[0].name = 'idle';
+  if (saluteAnimation.length > 0) saluteAnimation[0].name = 'running';
+  if (clappingAnimation.length > 0) clappingAnimation[0].name = 'football';
+  if (victoryAnimation.length > 0) victoryAnimation[0].name = 'snowboarding';
 
   const { actions } = useAnimations(
     [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
@@ -28,8 +29,13 @@ const Developer = ({ animationName = 'idle', ...props }) => {
   );
 
   useEffect(() => {
-    actions[animationName].reset().fadeIn(0.5).play();
-    return () => actions[animationName].fadeOut(0.5);
+    const action = actions[animationName];
+
+    if (action){
+      action.reset().fadeIn(0.5).play();
+      return () => action.fadeOut(0.5);
+    }
+
   }, [animationName]);
 
   return (
@@ -39,11 +45,6 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         geometry={nodes.Wolf3D_Hair.geometry}
         material={materials.Wolf3D_Hair}
         skeleton={nodes.Wolf3D_Hair.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Glasses.geometry}
-        material={materials.Wolf3D_Glasses}
-        skeleton={nodes.Wolf3D_Glasses.skeleton}
       />
       <skinnedMesh
         geometry={nodes.Wolf3D_Body.geometry}
@@ -96,11 +97,11 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         skeleton={nodes.Wolf3D_Teeth.skeleton}
         morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
         morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
-      />
+      /> 
     </group>
   );
 };
 
-useGLTF.preload('/models/animations/developer.glb');
+useGLTF.preload('/models/animations/developer2.glb');
 
 export default Developer;

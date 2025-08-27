@@ -555,7 +555,7 @@ import {
     {
       id: 1,
       name: 'Football',
-      pos: 'Once a month',
+      pos: 'Twice a month',
       duration: '',
       title: "Football is great for staying active, building teamwork, \
       and having fun with friends. It helps improve fitness, coordination, and social skills.",
@@ -564,10 +564,10 @@ import {
     },
     {
       id: 2,
-      name: 'Running',
-      pos: '5 km three times a week',
+      name: 'Walking',
+      pos: '5 km five times a week',
       duration: '2020 - 2022',
-      title: "Running is a simple and rewarding hobby that offers both physical and mental benefits.\
+      title: "Walking is a simple and rewarding exercise that offers both physical and mental benefits.\
       It helps improve cardiovascular health, build endurance, and reduce stress.",
       icon: running,
       animation: 'running',

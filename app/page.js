@@ -23,7 +23,7 @@ export default function Home() {
         <Experience />
         <Tech />
         <Works />
-        {/* <Hobby /> */}
+        <Hobby />
         <Feedbacks />
         <div className = 'relative z-0'>
           <Contact />
