@@ -20,29 +20,34 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient"/>
         </div>
 
-        <div>
-          <h1 className="heroHeadText">Hi, I'm <span className="text-[#915eff]">Vicharo </span><span className={`sectionHeadText waving-hand `}>👋</span></h1>
-          <p className="heroSubText">
-            I'm a Robotics Enthusiast who loves to
+        <div className='flex flex-col gap-7'>
+          <h1 className="heroHeadText">Hi, I'm <span className="text-[#915eff]">Vicharo </span><span className="sectionHeadText waving-hand sm:hidden">👋</span></h1>
+
+          <p className="heroSubText text-wrap">
+            I'm a Robotics Enthusiast who loves 
+            <br className="sm:block"/>to
             <span className='slide'>
               <span className='wrapper'>
                 {words.map((word)=>(
                   <span key={word.text} className='flex items-center md:!gap-3 !gap-1 pb-2'>
                     <span>
-                      　{word.text}
+                      {word.text}
                     </span>
                   </span>
                 ))}
               </span>
             </span>
-          </p>
-          <p className="heroSubText">
-            new ideas.
+            <span className="invisible">
+              innovation
+            </span>
+            <span>
+              new ideas.
+            </span>
           </p>
         </div>
       </div>
 
-      <div className='paddingX absolute inset-0'>
+      <div className='paddingX absolute inset-0 xs:translate-y-15'>
         <ComputersCanvas/>
       </div>
 
