@@ -4,6 +4,11 @@ import {motion} from 'framer-motion';
 
 import { ComputersCanvas} from './canvas';
 
+const words = [
+  {text: "explore"},
+  {text: "create"},
+  {text: "innovate"}
+]
 
 const Hero = () => {
 
@@ -18,12 +23,28 @@ const Hero = () => {
         <div>
           <h1 className="heroHeadText">Hi, I'm <span className="text-[#915eff]">Vicharo </span><span className={`sectionHeadText waving-hand `}>👋</span></h1>
           <p className="heroSubText">
-            I'm a Robotic Enthusiast making  <br className="sm:block hidden"/> projects related to robotics.
+            I'm a Robotics Enthusiast who loves to
+            <span className='slide'>
+              <span className='wrapper'>
+                {words.map((word)=>(
+                  <span key={word.text} className='flex items-center md:!gap-3 !gap-1 pb-2'>
+                    <span>
+                      　{word.text}
+                    </span>
+                  </span>
+                ))}
+              </span>
+            </span>
+          </p>
+          <p className="heroSubText">
+            new ideas.
           </p>
         </div>
       </div>
 
-      <ComputersCanvas/>
+      <div className='paddingX absolute inset-0'>
+        <ComputersCanvas/>
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">

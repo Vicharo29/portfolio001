@@ -21,7 +21,7 @@ const ExperienceCard = ({experience}) =>
     icon={
       <div className="flex !justify-center !items-center w-full h-full">
         <Image 
-          src={experience.icon} 
+          src={experience.icon}
           alt={experience.company_name} 
           className='w-[60%] h-[60%] object-contain'/>
       </div>
@@ -52,7 +52,10 @@ const ExperienceCard = ({experience}) =>
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div 
+        initial="hidden"
+        whileInView="show"
+        variants={textVariant()}>
         <p className="sectionSubText">
           What I have done so far
         </p>

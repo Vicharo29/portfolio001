@@ -95,7 +95,7 @@
 }
 
 .heroSubText {
-  @apply text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px];
+  @apply text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] overflow-hidden;
 }
 
 .sectionHeadText {
@@ -113,27 +113,27 @@
 }
 
 .work-container {
-  @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
+  @apply grid lg:grid-cols-3 grid-cols-1 gap-y-5 lg:gap-x-5 !mt-12;
 }
 
 .work-canvas {
-  @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+  @apply col-span-1 rounded-lg bg-black-100 border border-black-300 
 }
 
 .work-content {
-  @apply col-span-2 rounded-lg bg-black-100 border border-black-300 ;
+  @apply col-span-2 rounded-lg bg-black-100 border border-black-300;
 }
 
 .work-content_container {
-  @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-200 rounded-lg sm:px-5 px-2.5;
+  @apply grid grid-cols-[auto_1fr] items-start !gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-200 rounded-lg sm:!px-5 !px-2.5;
 }
 
 .work-content_logo {
-  @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
+  @apply rounded-3xl w-16 h-16 !p-2 bg-black-600;
 }
 
 .work-content_bar {
-  @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-200 group-last:hidden;
+  @apply flex-1 w-0.5 !mt-4 h-full bg-black-300 group-hover:bg-black-200 group-last:hidden;
 }
 }
 
@@ -165,7 +165,44 @@
   }
 }
 
+.slide{
+  display: inline-block;
+  flex-direction: column;
+  transition: all cubic-bezier(0.71, 0.03, 0.34, 1);
+}
 
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  animation: wordSlider 21s infinite cubic-bezier(0.9, 0.01, 0.3, 0.99);
+}
+
+@keyframes wordSlider {
+  0% {
+    transform: translateY(0.5%);
+  }
+  12.5% {
+    transform: translateY(-12.5%);
+  }
+  25% {
+    transform: translateY(-25%);
+  }
+  37.5% {
+    transform: translateY(-37.5%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  62.5% {
+    transform: translateY(-62.5%);
+  }
+  75% {
+    transform: translateY(-75%);
+  }
+  87.5% {
+    transform: translateY(-87.5%);
+  }
+}
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */

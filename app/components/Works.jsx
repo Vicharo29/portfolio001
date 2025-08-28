@@ -2,7 +2,9 @@
 
 import {Tilt} from 'react-tilt';
 
-import {motion} from 'framer-motion';
+// import {motion} from 'framer-motion';
+import {motion} from 'motion/react';
+
 
 import Image from 'next/image';
 
@@ -16,7 +18,10 @@ import {fadeIn, textVariant} from '../utils/motion';
 const ProjectCard = ({index, name, description, tags, image, source_code_link}) => {
   return (
     <motion.div 
-      variants={fadeIn("up", "spring", index*0.5, 0.75)}>
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={fadeIn("up", "spring", index*0.5, 0.7)}>
       <Tilt 
         options={{
           max: 45,
@@ -63,8 +68,11 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
 
 const Works = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
+    <section>
+      <motion.div 
+       initial="hidden"
+       whileInView="show"
+       variants={textVariant()}>
         <p className="sectionSubText">
           My Work
         </p>
@@ -75,6 +83,9 @@ const Works = () => {
 
       <div className='w-full flex'>
         <motion.p 
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           variants={fadeIn("","",0.1, 1)}
           className="!mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
             Below are selected projects I have worked on, showcasing the technologies and skills
@@ -91,7 +102,7 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project}/>
         ))}
       </div>
-    </>
+    </section>
   )
 }
 

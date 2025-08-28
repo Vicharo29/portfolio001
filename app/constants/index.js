@@ -414,7 +414,7 @@ import {
       description:
         "The vibration data is acquired from a Contec board connected to the PCI express.\
          The GUI can log the signal and calculate the frequency with varying window size; the \
-         result is updated in real time and can be used for quick analysis. For thorugh analysis, \
+         result is updated in real time and can be used for quick analysis. For thorough analysis, \
          however, the logged data is analysed using MATLAB.",
       tags: [
         {

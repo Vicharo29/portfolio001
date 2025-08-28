@@ -29,7 +29,10 @@ const Hobby = () => {
 
   return (
     <section className="c-space my-20">
-      <motion.div variants={textVariant()}>
+      <motion.div 
+        initial="hidden"
+        whileInView="show"
+      variants={textVariant()}>
         <p className="sectionSubText">
           what I like
         </p>
@@ -53,8 +56,8 @@ const Hobby = () => {
           </Canvas>
         </div>
 
-        <div className='work-content bg-white'>
-        <div className="sm:!py-10 !py-5 sm:!px-5 !px-2.5">
+        <div className='work-content'>
+        <div className="sm:py-10 !py-5 sm:px-5 !px-2.5">
               {hobby.map((item, index) => (
                 <div
                   key={index}

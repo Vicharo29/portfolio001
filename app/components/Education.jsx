@@ -52,7 +52,10 @@ const EducationCard = ({education}) =>
 const Education = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div 
+        initial="hidden"
+        whileInView="show"
+       variants={textVariant()}>
         <p className="sectionSubText">
           Where and what I have studied so far
         </p>
@@ -60,7 +63,10 @@ const Education = () => {
           Education.
         </h2>
       </motion.div>
-      <motion.p 
+      <motion.p
+          initial="hidden"
+          whileInView="show"
+          values={{ once: true }}
           variants={fadeIn("","",0.1, 1)} 
           className="!mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
           After graduating from high school in Cambodia, I was able to pursue further education in Japan under the support from 

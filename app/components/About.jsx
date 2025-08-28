@@ -2,7 +2,8 @@
 
 import React from 'react'
 import {Tilt} from 'react-tilt'
-import {motion} from 'framer-motion'
+// import {motion} from 'framer-motion'
+import {motion} from 'motion/react';
 
 import Image from 'next/image'
 
@@ -15,6 +16,9 @@ const ServiceCard = ({index, title, icon}) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.5 }}
         variants={fadeIn("right", "spring", 0.5*index, 0.75)}
         className='w-full green-pink-gradient !p-[1px] rounded-[20px] shadow-card'>
           <div
@@ -38,7 +42,10 @@ const ServiceCard = ({index, title, icon}) => {
 const About = () => {
   return (
     <section>
-      <motion.div variants={textVariant()}>
+      <motion.div 
+        initial="hidden"
+        whileInView="show"
+        variants={textVariant()}>
         <p className="sectionSubText">
           Introduction
         </p>
@@ -48,6 +55,9 @@ const About = () => {
       </motion.div>
 
       <motion.p 
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
         variants={fadeIn("","",0.1, 1)} 
         className="!mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
         I am a robotic enthusiast who has a background in mechanical engineering and is passionate about robots 
