@@ -1,13 +1,17 @@
 "use client"
 
-import {motion} from 'framer-motion';
+import {motion} from 'motion/react';
+
+import Image from 'next/image';
 
 import { ComputersCanvas} from './canvas';
 
+import { CreateLogo, ExploreLogo, InnovateLogo } from '../assets';
+
 const words = [
-  {text: "explore"},
-  {text: "create"},
-  {text: "innovate"}
+  {text: "explore", icon: <ExploreLogo />},
+  {text: "create", icon: <CreateLogo />},
+  {text: "innovate", icon: <InnovateLogo />}
 ]
 
 const Hero = () => {
@@ -28,8 +32,9 @@ const Hero = () => {
             <br className="sm:block"/>to
             <span className='slide'>
               <span className='wrapper'>
-                {words.map((word)=>(
-                  <span key={word.text} className='flex items-center md:!gap-3 !gap-1 pb-2'>
+                {words.map((word,index)=>(
+                  <span key={index} className='flex items-center  !gap-1 !pb-2'>
+                    {word.icon}
                     <span>
                       {word.text}
                     </span>
@@ -38,7 +43,7 @@ const Hero = () => {
               </span>
             </span>
             <span className="invisible">
-              innovation
+              miinnovation
             </span>
             <span>
               new ideas.

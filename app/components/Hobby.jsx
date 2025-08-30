@@ -1,7 +1,7 @@
 "use client"
 
 import { Suspense, useState } from 'react';
-import {motion} from 'framer-motion';
+import {motion} from 'motion/react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 

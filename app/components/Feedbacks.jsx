@@ -1,6 +1,6 @@
 "user client"
 
-import {motion} from 'framer-motion';
+import {motion} from 'motion/react';
 
 import {SectionWrapper} from '../hoc';
 import {fadeIn, textVariant} from '../utils/motion';
@@ -50,10 +50,10 @@ const Feedbacks = () => {
         whileInView="show"
         variants={textVariant()}>
           <p className="sectionSubText">
-            What people say
+            What motivates me
           </p>
           <h2 className="sectionHeadText">
-            Social Profile.
+            Quotes.
           </h2>
         </motion.div>
       </div>

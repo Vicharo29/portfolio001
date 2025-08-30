@@ -42,11 +42,11 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
              </div>
           </div>
 
-          <div className='!mt-5 hover:cursor-pointer'>
-            <h3 className='text-white font-bold text-[24px] '>
+          <div className='!mt-5'>
+            <h3 className='text-white font-bold text-[24px] hover:cursor-pointer'>
               {name}
             </h3>
-            <p className='!mt-2 text-secondary text-[14px]'>
+            <p className='!mt-2 text-secondary text-[14px] selection:bg-[#915eff] selection:text-white'>
               {description}
             </p>
           </div>

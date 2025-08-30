@@ -20,7 +20,7 @@ const ServiceCard = ({index, title, icon}) => {
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
         variants={fadeIn("right", "spring", 0.5*index, 0.75)}
-        className='w-full green-pink-gradient !p-[1px] rounded-[20px] shadow-card'>
+        className='sm:w-full w-[220px] green-pink-gradient !p-[1px] rounded-[20px] shadow-card'>
           <div
             options={{
               max:25,
@@ -70,7 +70,7 @@ const About = () => {
         the field of both robotics and software.
       </motion.p>
 
-      <div className="!mt-20 flex flex-wrap gap-10">
+      <div className="!mt-20 flex sm:flex-wrap gap-10 max-sm:overflow-x-auto scrollbar-hide max-sm:h-[320px] items-center">
         {services.map((service, index)=>(
           <ServiceCard key={service.title} index={index}{...service}/>
         ))}
