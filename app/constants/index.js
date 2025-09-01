@@ -33,6 +33,7 @@ import {
     threejs,
     titech,
     canon,
+    cinc,
     inventor,
     mainGui,
     psGui,
@@ -163,6 +164,7 @@ import {
       icon: titech,
       iconBg: "#E6DEDD",
       date: "April 2018 - March 2022",
+      link: "https://www.titech.ac.jp/english/",
       points: [
         "Mechanical Engineering.",
         "Thesis: Wire-Driven Control of Exoskeleton Continuum Robot Using Deep Learning.",
@@ -178,6 +180,7 @@ import {
       icon: titech,
       iconBg: "#E6DEDD",
       date: "April 2022 - March 2024",
+      link: "https://www.titech.ac.jp/english/",
       points: [
         "Mechanical Engineering in Human Centered Science and Biomedical Engineering.",
         "Thesis: Force Sensing of 5 mm Robotic Forceps With Flexible Wrist Joint Based on Cable Vibration.",
@@ -194,6 +197,7 @@ import {
       title: "Research Assistant",
       company_name: "Tadano Laboratory",
       icon: titech,
+      iconSize: "60%",
       iconBg: "#E6DEDD",
       date: "June 2021 - March 2022",
       points: [
@@ -208,6 +212,7 @@ import {
       title: "Research Assistant",
       company_name: "Omata Laboratory",
       icon: titech,
+      iconSize: "60%",
       iconBg: "#E6DEDD",
       date: "April 2022 - March 2024",
       points: [
@@ -221,8 +226,22 @@ import {
       title: "Software Engineer",
       company_name: "Canon Medical Systems",
       icon: canon,
+      iconSize: "72%",
       iconBg: "#E6DEDD",//383E56
-      date: "April 2024 - Present",
+      date: "April 2024 - July 2025",
+      points: [
+        "Collaborated with team members in the development of an ultrasound equipment.",
+        "Responsible for improving the method of automation test.",
+        "Fixed software bugs and responsible for the development of a new prototype function from determining the specifications to system test.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company_name: "Canon",
+      icon: cinc,
+      iconSize: "75%",
+      iconBg: "#E6DEDD",//383E56
+      date: "August 2025 - Present",
       points: [
         "Collaborated with team members in the development of an ultrasound equipment.",
         "Responsible for improving the method of automation test.",

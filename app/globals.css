@@ -77,6 +77,13 @@
   display: inline-block;
 }
 
+.footer {
+  @apply
+    pb-5 py-3
+    flex items-center
+    w-full top-0 z-20
+    sm:px-16 px-6
+}
 
 .paddingX {
   @apply sm:px-16 px-6;
@@ -99,7 +106,7 @@
 }
 
 .heroSubLogo {
-  @apply w-5 h-5 text-white xs:w-6 xs:h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 rounded-full bg-[#915eff]
+  @apply w-5 h-5 text-white xs:w-6 xs:h-6 sm:w-6 sm:h-6 lg:w-7 lg:h-7 rounded-full bg-[#915eff];
 }
 
 .sectionHeadText {

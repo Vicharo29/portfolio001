@@ -12,6 +12,8 @@ import {SectionWrapper} from '../hoc';
 import { textVariant, fadeIn } from '../utils/motion';
 import { exp } from 'three/tsl';
 
+import { LinkLogo } from '../assets';
+
 const EducationCard = ({education}) => 
   (<VerticalTimelineElement
     contentStyle = {{background: '#1d1836', color: '#fff'}}  
@@ -29,7 +31,7 @@ const EducationCard = ({education}) =>
   >
     <div>
       <h3 className="text-white text-[24px] font-bold">
-        {education.school}
+        {education.school}<span className='inline-block !px-1 cursor-pointer' onClick={() => window.open(education.link, "_blank")}><LinkLogo /></span>
       </h3>
       <p className="text-secondary text-[16px] font-semibold" style={{margin:0}}>
         {education.company_name}

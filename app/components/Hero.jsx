@@ -33,7 +33,7 @@ const Hero = () => {
             <span className='slide'>
               <span className='wrapper'>
                 {words.map((word,index)=>(
-                  <span key={index} className='flex items-center  !gap-1 !pb-2'>
+                  <span key={index} className='flex items-center !gap-1 !pb-2'>
                     {word.icon}
                     <span>
                       {word.text}

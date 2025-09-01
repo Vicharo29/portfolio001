@@ -11,6 +11,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Hobby from './Hobby';
+import Footer from "./Footer";
 
 export {
   Hero,
@@ -26,5 +27,6 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
-  Hobby
+  Hobby,
+  Footer
 }
