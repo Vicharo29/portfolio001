@@ -16,6 +16,10 @@
   --white-100: #f3f3f3;
   --white-800: #E4E4E6;
 
+  --green: #00cea8;
+  --pink: #bf61ff;
+  --greenpink: linear-gradient(90deg, #00cea8 1.9%, #bf61ff 97.5%);
+
   --boxShadow: 0px 35px 120px -15px #211e35;
 
   --screens: 450px;
@@ -34,6 +38,7 @@
   --color-black-600: var(--black-600);
   --color-white-100: var(--white-100);
   --color-white-800: var(--white-800);
+  --color-greengradient: linear-gradient(90deg, var(--green) 1.9%, var(--pink) 97.5%);
 
   --breakpoint-xs: 450px;
   --font-sans: var(--font-poppins);

@@ -71,9 +71,9 @@ const Education = () => {
           values={{ once: true }}
           variants={fadeIn("","",0.1, 1)} 
           className="!mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          After graduating from high school in Cambodia, I was able to pursue further education in Japan under the support from 
-          MEXT-<span className='hover:text-white'><a href="https://asja.gr.jp/" target="_blank" >ASJA</a></span> scholarship.
-          I studied Japanese for one year at Tokyo University of Foreign Studies
+          After graduating from high school in Cambodia, I pursued further education in Japan under the support from 
+          MEXT-<span className='hover:text-white'><a href="https://asja.gr.jp/" target="_blank" >ASJA</a></span> scholarship for the Bachelor's Degree and MEXT scholarship for the Master's Degree.
+          Upon arriving in Japan, I studied Japanese for one year at Tokyo University of Foreign Studies
           and then enrolled in Tokyo Institute of Technology, currently known as <span className='hover:text-white'><a href="https://www.isct.ac.jp/ja" target="_blank" >Tokyo University of Science</a></span>.
           I am conversant in Khmer, English and Japanese.
       </motion.p>

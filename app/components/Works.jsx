@@ -4,7 +4,7 @@ import {Tilt} from 'react-tilt';
 
 // import {motion} from 'framer-motion';
 import {motion} from 'motion/react';
-
+import {useState, createContext} from 'react';
 
 import Image from 'next/image';
 
@@ -13,15 +13,37 @@ import { SectionWrapper } from '../hoc';
 import {projects} from '../constants';
 import {fadeIn, textVariant} from '../utils/motion';
 
+import WorkPopUp from './popup/WorkPopUp';
+
 // const github = "./assets/github.png"
 
-const ProjectCard = ({index, name, description, tags, image, source_code_link}) => {
+export const popUpContext = createContext();
+
+const ProjectCard = ({project}) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedWork, setSelectedWork] = useState(null);
+
+  console.log(project.name)
+  const popUpValue = {
+    isOpen,
+    setIsOpen,
+    selectedWork,
+    setSelectedWork
+  }
+
+  const handleCardClick = (work) => {
+    setSelectedWork(work);
+    setIsOpen(true);
+  };
+
   return (
+    <popUpContext.Provider value={popUpValue}>
     <motion.div 
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.5 }}
-      variants={fadeIn("up", "spring", index*0.5, 0.7)}>
+      variants={fadeIn("up", "spring", project.index*0.5, 0.7)}>
       <Tilt 
         options={{
           max: 45,
@@ -31,11 +53,11 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
         className="bg-tertiary !p-5 rounded-2xl sm:w-[360px] w-full">
           <div className='relative w-full h-[230px]'>
             <Image 
-             src={image} 
-             alt={name} 
+             src={project.image} 
+             alt={project.name} 
              className='w-full h-full object-cover rounded-2xl'/>
              <div className='absolute !inset-0 flex justify-end !m-3 card-Image_hover'>
-                <div onClick={()=> window.open(source_code_link, '_blank')}
+                <div onClick={()=> window.open(project.source_code_link, '_blank')}
                   className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'>
                     <Image src={github} alt="github" className='w-1/2 h-1/2 object-contain'/>
                 </div>
@@ -43,16 +65,16 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
           </div>
 
           <div className='!mt-5'>
-            <h3 className='text-white font-bold text-[24px] hover:cursor-pointer'>
-              {name}
+            <h3 className='text-white font-bold text-[24px] hover:cursor-pointer' onClick={() => handleCardClick(project)}>
+              {project.name}
             </h3>
             <p className='!mt-2 text-secondary text-[14px] selection:bg-[#915eff] selection:text-white'>
-              {description}
+              {project.description}
             </p>
           </div>
 
           <div className='!mt-4 flex flex-wrap gap-2'>
-            {tags.map((tag)=>(
+            {project.tags.map((tag)=>(
               <p key={tag.name} className={`text-[14px] ${tag.color}`}>
                   #{tag.name}
               </p>
@@ -61,14 +83,17 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link}) 
           </div>
       </Tilt>
 
+      {isOpen && <WorkPopUp work={selectedWork}/>}
+
     </motion.div>
+    </popUpContext.Provider>
   )
 }
 
 
 const Works = () => {
   return (
-    <section>
+    <section className='relative'>
       <motion.div 
        initial="hidden"
        whileInView="show"
@@ -99,7 +124,7 @@ const Works = () => {
 
       <div className="!mt-20 flex flex-wrap gap-7">
         {projects.map((project, index)=>(
-          <ProjectCard key={`project-${index}`} index={index} {...project}/>
+          <ProjectCard key={`project-${index}`} index={index} project={project}/>
         ))}
       </div>
     </section>
