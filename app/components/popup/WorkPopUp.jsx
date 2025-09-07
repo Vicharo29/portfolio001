@@ -32,7 +32,7 @@ const WorkPopUp = ({work}) => {
   }, [isOpen]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-49 bg-black-200 bg-opacity-50" onClick={()=>handleClose()}>
+    <div className="fixed top-10 inset-0 flex items-center justify-center z-49 bg-black-200 bg-opacity-50" onClick={()=>handleClose()}>
         <motion.div
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
