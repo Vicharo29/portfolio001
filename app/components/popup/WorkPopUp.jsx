@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 import { popUpContext } from '../Works';
 
+import { SectionWrapper } from '../../hoc';
+
 const WorkPopUp = ({work}) => {
 
     // console.log(work)
@@ -30,16 +32,16 @@ const WorkPopUp = ({work}) => {
   }, [isOpen]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-black-200 bg-opacity-50" onClick={()=>handleClose()}>
+    <div className="fixed inset-0 flex items-center justify-center z-49 bg-black-200 bg-opacity-50" onClick={()=>handleClose()}>
         <motion.div
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.5, opacity: 0 }}
         transition={{ type: "spring", duration: 0.7 }}
-        className="relative bg-primary !p-[1px] rounded-2xl w-full lg:max-w-4xl sm:max-w-2xl max-w-md shadow-card green-pink-gradient"
+        className="relative bg-primary !p-[1px] rounded-2xl w-full lg:max-w-4xl sm:max-w-2xl max-w-md shadow-card green-pink-gradient z-50"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className='bg-primary !p-6 rounded-2xl'>
+        <div className='bg-primary !p-7 rounded-2xl'>
             <button
             className="absolute top-2 right-4 text-xl text-gray-400 hover:text-white hover:scale-120 hover:rotate-90 transition-transform duration-200 hover:cursor-pointer scale-110"
             onClick={()=>handleClose()}
@@ -47,21 +49,21 @@ const WorkPopUp = ({work}) => {
             &times;
             </button>
 
-            <div className='grid grid-cols-1 sm:grid-cols-2 sm:gap-7 sm:items-start'>
-                <div className='w-full h-full'>
-                    <Image 
-                        src={selectedWork.image}
-                        alt={selectedWork.name} 
-                        className='w-full h-full object-cover rounded-2xl'/>
-                </div>
+            <div className='grid grid-cols-1 sm:grid-cols-2 sm:gap-7 sm:items-start sm:h-full '>
+                <Image 
+                    src={selectedWork.image}
+                    alt={selectedWork.name} 
+                    className='w-full sm:max-h-full h-75 object-cover rounded-2xl'/>
 
                 <div className='!mt-5 sm:!mt-0'>
                     <h2 className="text-white font-bold text-2xl !mb-2">
                         {selectedWork?.name || "Work Experience"}
                     </h2>
-                    <p className='text-secondary text-justify'>
-                        {selectedWork?.description || "I have worked on various projects using Next.js, React, and Tailwind CSS."}
-                    </p>
+                    <div className='overflow-y-auto max-h-60 scrollbar-hide'>
+                        <p className='text-secondary text-justify'>
+                            {selectedWork?.description || "I have worked on various projects using Next.js, React, and Tailwind CSS."}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,4 +72,4 @@ const WorkPopUp = ({work}) => {
   )
 }
 
-export default WorkPopUp
+export default WorkPopUp;
