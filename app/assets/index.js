@@ -52,6 +52,7 @@ import psGui from "./work/ps.png";
 import conti from "./work/conti.jpg";
 import irrigation from "./work/irrigation.jpg";
 import fgl from "./work/fgl.png";
+import cyj from "./work/cyj.png";
 import fs from "./work/fs.png";
 import linear from "./work/linear.png";
 import weblogo from "./work/weblogo.png";
@@ -137,6 +138,7 @@ export {
   conti,
   irrigation,
   fgl,
+  cyj,
   fs,
   linear,
   latex,

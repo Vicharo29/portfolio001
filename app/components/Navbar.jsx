@@ -23,10 +23,10 @@ const Navbar = () => {
             window.scrollTo(0,0);}}>
         <Image src={logoR} alt="logo" className="w-9 h-9 object-obtain"/>
         <p className="text-white text-[18px] font-bold cursor-pointer flex"> Vicharo &nbsp;
-          <span className="sm:block hidden">| Robotics Enthusiast</span>
+          <span className="lg:block hidden">| Robotics Enthusiast</span>
           </p>
           </Link>
-        <ul className="list-none hidden sm:flex gap-10 flex-row">
+        <ul className="list-none hidden md:flex gap-10 flex-row">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -39,7 +39,7 @@ const Navbar = () => {
               </li>
             ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <Image 
             src={toggle ? close:menu}
             alt="menu"

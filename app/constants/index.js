@@ -40,6 +40,7 @@ import {
     conti,
     irrigation,
     fgl,
+    cyj,
     fs,
     linear,
     mecha,
@@ -507,6 +508,29 @@ import {
       ],
       image: fgl,
       source_code_link: "",
+      icon: weblogo,
+    },
+    {
+      name: "CYJ United Football Club Website",
+      description:
+        "The website showcases the achievements and activities of the CYJ United Football Club. \
+        It provides information about the club's history, team members, and upcoming events.",
+      tags: [
+        {
+          name: "html",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwindcss",
+          color: "green-text-gradient",
+        },
+        {
+          name: "reactjs",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: cyj,
+      source_code_link: "https://cyjunited.vercel.app/en",
       icon: weblogo,
     },
     {
