@@ -370,19 +370,19 @@ import {
       ],
       popup:[
         {
-          type: "🛠️ Tech",
+          type: "Tech",
           content: "Developed a deep learning model for 3D joint coordinate estimation."
         },
         {
-          type: "🎯 Purpose",
+          type: "Purpose",
           content: "To enable precise control and manipulation of the robot's joints."
         },
         {
-          type: "🙋 Role",
+          type: "Role",
           content: "Researcher"
         },
         {
-          type: "📈 Impact",
+          type: "Impact",
           content: "Enhanced the robot's operational efficiency and accuracy."
         }
       ],
@@ -420,6 +420,24 @@ import {
           name: "circuits",
           color: "pink-text-gradient",
         },
+      ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
       ],
       image: fs,
       source_code_link: "",
@@ -466,6 +484,24 @@ import {
           name: "UIdesign",
           color: "pink-text-gradient",
         },
+      ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
       ],
       image: mainGui,
       source_code_link: "",
@@ -514,6 +550,24 @@ import {
           color: "blue-text-gradient",
         },
       ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
+      ],
       image: psGui,
       source_code_link: "",
       link:[
@@ -552,6 +606,24 @@ import {
           color: "green-text-gradient",
         },
       ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
+      ],
       image: fgl,
       source_code_link: "",
       link:[
@@ -581,6 +653,24 @@ import {
           name: "nextjs",
           color: "pink-text-gradient",
         },
+      ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
       ],
       image: cyj,
       source_code_link: "https://cyjunited.vercel.app/en",
@@ -625,6 +715,24 @@ import {
           color: "pink-text-gradient",
         },
       ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
+      ],
       image: irrigation,
       source_code_link: "",
       link:[
@@ -659,6 +767,24 @@ import {
           name: "khmerlanguage",
           color: "blue-text-gradient",
         },
+      ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
       ],
       image: linear,
       source_code_link: "https://blogforall777.wordpress.com/2020/10/01/%e1%9e%96%e1%9e%b7%e1%9e%87%e1%9e%82%e1%9e%8e%e1%9e%b7%e1%9e%8f-%e1%9e%95%e1%9f%92%e1%9e%93%e1%9f%82%e1%9e%80-i/",

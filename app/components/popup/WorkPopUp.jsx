@@ -4,8 +4,7 @@ import { useEffect, useContext } from "react";
 import Image from 'next/image';
 
 import { popUpContext } from '../Works';
-
-import { SectionWrapper } from '../../hoc';
+import { i } from 'maath/dist/index-0332b2ed.esm';
 
 const WorkPopUp = ({work}) => {
 
@@ -61,11 +60,23 @@ const WorkPopUp = ({work}) => {
                     <h2 className="text-white font-bold text-2xl !mb-2">
                         {selectedWork?.name || "Work Experience"}
                     </h2>
-                    <div className='overflow-y-auto max-h-40 scrollbar-hide sm:max-h-60'>
+                    {/* <div className='overflow-y-auto max-h-40 scrollbar-hide sm:max-h-60'>
                         <p className='text-secondary text-justify'>
                             {selectedWork?.description || "I have worked on various projects using Next.js, React, and Tailwind CSS."}
                         </p>
-                    </div>
+                    </div> */}
+                    <ul className='overflow-y-auto max-h-45 scrollbar-hide sm:max-h-60'>
+                        {selectedWork?.popup.map((item, index) => (
+                            <li key={`popup-${index}`}>
+                                <p className='text-secondary text-justify'>
+                                    <span className='text-white font-semibold'>
+                                        {item.type}
+                                    </span> 
+                                    : {item.content}
+                                </p>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>
