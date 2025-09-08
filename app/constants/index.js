@@ -42,6 +42,9 @@ import {
     fgl,
     cyj,
     fs,
+    weblogo2,
+    article,
+    book,
     linear,
     mecha,
     ml,
@@ -54,7 +57,8 @@ import {
     weblogo,
     buddha,
     einstein,
-    jobs
+    jobs,
+
   } from "../assets";
   
   export const navLinks = [
@@ -364,9 +368,33 @@ import {
           color: "pink-text-gradient",
         },
       ],
+      popup:[
+        {
+          type: "🛠️ Tech",
+          content: "Developed a deep learning model for 3D joint coordinate estimation."
+        },
+        {
+          type: "🎯 Purpose",
+          content: "To enable precise control and manipulation of the robot's joints."
+        },
+        {
+          type: "🙋 Role",
+          content: "Researcher"
+        },
+        {
+          type: "📈 Impact",
+          content: "Enhanced the robot's operational efficiency and accuracy."
+        }
+      ],
       image: conti,
       source_code_link: "https://www.jstage.jst.go.jp/article/jsmermd/2022/0/2022_1A1-D01/_article/-char/en",
-      icon: weblogo,
+      link:[
+        {
+          type: "article",
+          url: "https://www.jstage.jst.go.jp/article/jsmermd/2022/0/2022_1A1-D01/_article/-char/en"
+        }
+      ],
+      icon: weblogo2,
     },
     {
       name: "Robotic Forceps Capable of Force Sensing",
@@ -395,7 +423,13 @@ import {
       ],
       image: fs,
       source_code_link: "",
-      icon: weblogo,
+      link:[
+        {
+          type: "article",
+          url: "10.1109/TMRB.2025.3583164n"
+        }
+      ],
+      icon: article,
     },
     {
       name: "Control System for the Robotic Forceps",
@@ -435,6 +469,12 @@ import {
       ],
       image: mainGui,
       source_code_link: "",
+      link:[
+        {
+          type: "none",
+          url: ""
+        }
+      ],
       icon: github,
     },
     {
@@ -476,6 +516,12 @@ import {
       ],
       image: psGui,
       source_code_link: "",
+      link:[
+        {
+          type: "none",
+          url: ""
+        }
+      ],
       icon: github,
     },
     {
@@ -508,13 +554,20 @@ import {
       ],
       image: fgl,
       source_code_link: "",
-      icon: weblogo,
+      link:[
+        {
+          type: "none",
+          url: ""
+        }
+      ],
+      icon: weblogo2,
     },
     {
       name: "CYJ United Football Club Website",
       description:
-        "The website showcases the achievements and activities of the CYJ United Football Club. \
-        It provides information about the club's history, team members, and upcoming events.",
+        "The website showcases the activities of the CYJ United Football Club. \
+        It provides information about the club's history, team members, and match results.\
+        The website also features a gallery of photos from the club's events. Khmer and English are available.",
       tags: [
         {
           name: "html",
@@ -525,13 +578,19 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "reactjs",
+          name: "nextjs",
           color: "pink-text-gradient",
         },
       ],
       image: cyj,
       source_code_link: "https://cyjunited.vercel.app/en",
-      icon: weblogo,
+      link:[
+        {
+          type: "website",
+          url: "https://cyjunited.vercel.app/en"
+        }
+      ],
+      icon: weblogo2,
     },
     {
       name: "Automatic Irrigation System",
@@ -568,6 +627,12 @@ import {
       ],
       image: irrigation,
       source_code_link: "",
+      link:[
+        {
+          type: "none",
+          url: ""
+        }
+      ],
       icon: github,
     },
     {
@@ -597,7 +662,13 @@ import {
       ],
       image: linear,
       source_code_link: "https://blogforall777.wordpress.com/2020/10/01/%e1%9e%96%e1%9e%b7%e1%9e%87%e1%9e%82%e1%9e%8e%e1%9e%b7%e1%9e%8f-%e1%9e%95%e1%9f%92%e1%9e%93%e1%9f%82%e1%9e%80-i/",
-      icon: weblogo,
+      link:[
+        {
+          type: "book",
+          url: "https://blogforall777.wordpress.com/2020/10/01/%e1%9e%96%e1%9e%b7%e1%9e%87%e1%9e%82%e1%9e%8e%e1%9e%b7%e1%9e%8f-%e1%9e%95%e1%9f%92%e1%9e%93%e1%9f%82%e1%9e%80-i/"
+        }
+      ],
+      icon: book,
     },
   ];
 
