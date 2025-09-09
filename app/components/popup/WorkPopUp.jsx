@@ -65,7 +65,7 @@ const WorkPopUp = ({work}) => {
                             {selectedWork?.description || "I have worked on various projects using Next.js, React, and Tailwind CSS."}
                         </p>
                     </div> */}
-                    <ul className='overflow-y-auto max-h-45 scrollbar-hide sm:max-h-60'>
+                    {/* <ul className='overflow-y-auto max-h-45 scrollbar-hide sm:max-h-60'>
                         {selectedWork?.popup.map((item, index) => (
                             <li key={`popup-${index}`}>
                                 <p className='text-secondary text-justify'>
@@ -76,7 +76,20 @@ const WorkPopUp = ({work}) => {
                                 </p>
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
+
+                    <div className='overflow-y-auto max-h-45 scrollbar-hide sm:max-h-60 w-full'>
+                        {selectedWork?.popup.map((item, index) => (
+                            <div className="grid grid-cols-5 sm:grid-cols-4 gap-2 sm:gap-1" key={`popup-${index}`}>
+                                <p className='text-white'>
+                                    {item.type}
+                                </p>
+                                <p className='text-secondary text-justify col-span-4 sm:col-span-3'>
+                                    : {item.content}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

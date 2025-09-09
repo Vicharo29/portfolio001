@@ -2,7 +2,7 @@
 
 import {motion} from 'motion/react';
 
-import Image from 'next/image';
+import Link from 'next/link';
 
 import { ComputersCanvas} from './canvas';
 
@@ -57,8 +57,8 @@ const Hero = () => {
       </div>
 
       <div className="absolute xs:-bottom-5 -bottom-10 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-center p-2">
+        <Link href="#about">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-center p-2 hover:cursor-pointer">
             <motion.div
               animate={{
                 y: [0, 15, 0],
@@ -71,7 +71,7 @@ const Hero = () => {
               className="w-3 h-3 bg-secondary rounded-full mb-1"
               />
           </div>
-        </a>
+        </Link>
       </div>
     </section>
   );
